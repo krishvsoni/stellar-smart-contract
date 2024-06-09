@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<script is:inline>var global = global || window;</script>
+<Layout title="Krish Soni">
+	<main>
+		<h1>Krish Soni</h1>
+		<p class="instructions">
+			Welcome to my landing page!<br />
+			Feel free to explore and learn more about me.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="#"
+				title="About Me"
+				body="Learn more about Krish Soni."
+			/>
+			<Card
+				href="#"
+				title="Portfolio"
+				body="Explore my portfolio and projects."
+			/>
+			<Card
+				href="#"
+				title="Contact"
+				body="Get in touch with Krish Soni."
+			/>
+			<Card
+				href="#"
+				title="Blog"
+				body="Read articles and insights by Krish Soni."
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		text-align: center;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 1em;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
